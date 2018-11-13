@@ -57,13 +57,17 @@ public class ArraysAreFun {
     }
 
     public static Integer[] longestGrowingTrent(Integer[] array) {
-        String longer;
-        String temp;
-        for (int i = 1; i < array.length; i++) {
 
+
+        for (int i = 1; i < array.length - 1; i++) {
+
+            int start = 0;
+            if (array[i] > array[i - 1]) {
+                start = i;
+            }
 
         }
-        return new Integer[1];
+        return null;
     }
 
 
