@@ -12,7 +12,9 @@ public class Runner {
         PrintingIsFun.printTree(5);
 
 
-        //  Integer[] merge = ArraysAreFun.merge(new Integer[]{3, 4, 6, 12}, new Integer[]{1, 2, 6, 15});
+        Integer[] merge = ArraysAreFun.merge(new Integer[]{3, 4, 6, 12}, new Integer[]{1, 2, 6, 15,100});
+        System.out.println("\nMerage array: "); ArraysAreFun.printArray(merge);
+
         Integer[] reverse = ArraysAreFun.reverse(new Integer[]{1, 2, 3, 4, 0});
         System.out.println("\nReversed array:");
         ArraysAreFun.printArray(reverse);

@@ -8,28 +8,27 @@ public class ArraysAreFun {
         }
     }
 
-    /* public static Integer[] merge(Integer[] first, Integer[] second) {
-         System.out.println("Merge two Integer arrays:");
-         System.out.println("First:");
-         for (Integer i : first) {
-             System.out.print("[" + i + "]");
-         }
-         System.out.println("\nSecond:");
-         for (Integer i : second) {
-             System.out.print("[" + i + "]");
-         }
+    public static Integer[] merge(Integer[] first, Integer[] second) {
+        System.out.println("Merge two Integer arrays:");
+        System.out.println("First:");
+        ArraysAreFun.printArray(first);
+        System.out.println("\nSecond:");
+        ArraysAreFun.printArray(second);
 
-         Integer[] result = new Integer[first.length + second.length];
+        Integer[] result = new Integer[first.length + second.length];
+        int i = 0, j = 0, k = 0;
+        while (i < first.length && j < second.length)
+            result[k++] = first[i] < second[j] ? first[i++] : second[j++];
+        while (i < first.length)
+            result[k++] = first[i++];
+        while (j < second.length)
+            result[k++] = second[j++];
 
-         for (int i = 0; i < result.length; i++) {
+        return result;
+    }
 
-         }
-
-         return result;
-     }
-     */
     public static Integer[] reverse(Integer[] array) {
-        System.out.println("Array to revers: ");
+        System.out.println("\nArray to revers: ");
         for (Integer i : array) {
             System.out.print("[" + i + "]");
         }
@@ -58,12 +57,16 @@ public class ArraysAreFun {
 
     public static Integer[] longestGrowingTrent(Integer[] array) {
 
+        int numerOfTrent = 0;
+        int endIndex = 0;
 
         for (int i = 1; i < array.length - 1; i++) {
 
-            int start = 0;
             if (array[i] > array[i - 1]) {
-                start = i;
+                endIndex=i-1;
+                numerOfTrent++;
+            }else{
+
             }
 
         }
